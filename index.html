@@ -14,9 +14,132 @@
     <title>Weather App</title>
   </head>
   <body>
+    <!--container starts-->
     <div class="container">
-      <h1>Hello World!</h1>
+      <!--weather app starts-->
+      <div class="weather-app">
+        <!--app name and/or logo goes here-->
+        <div class="weather-wrapper">
+          <!--search form starts-->
+          <form>
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  class="form-control search-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+              <!--current location button-->
+              <div class="col-3">
+                <input
+                  type="button"
+                  value="You Are Here"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <!--search form ends-->
+        </div>
+        <!--city weather info starts (i.e. city name, current temp, icon)-->
+        <div class="weather-info">
+          <div class="row">
+            <div class="col-6">
+              <!--city name-->
+              <h1>City Name</h1>
+              <ul>
+                <!--date and time-->
+                <li><span>Date and Time</span>, weather description</li>
+                <li>
+                  Humidity: <strong>xx %</strong>, Wind:
+                  <strong>xx km/h</strong>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <div class="temperature-container d-flex justify-content-end">
+                <!--weather icon-->
+                <canvas width="52" height="52"></canvas>
+                <div>
+                  <!--current temp-->
+                  <span class="temperature">xx</span>
+                  <!--temp unit-->
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--city weather info ends-->
+        <!--forecast row starts-->
+        <div class="weather-forecast-row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Wed</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">19°</span
+                ><span class="forecast-temperature-min">12°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Thu</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">24°</span
+                ><span class="forecast-temperature-min">14°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Fri</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">19°</span
+                ><span class="forecast-temperature-min">11°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Sat</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">19°</span
+                ><span class="forecast-temperature-min">8°</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Sun</div>
+              <canvas width="38" height="38"></canvas>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">13°</span
+                ><span class="forecast-temperature-min">4°</span>
+              </div>
+            </div>
+          </div>
+          <footer>
+            This project was coded by Mara Bermudez and is hosted on Netlify
+          </footer>
+        </div>
+        <!--forecast row ends-->
+      </div>
+      <!--weather app ends-->
     </div>
+    <!--container ends-->
     <script src="src/app.js"></script>
   </body>
 </html>
